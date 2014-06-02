@@ -1,0 +1,6 @@
+The libSVM package is developed by Chih-Chung Chang and Chih-Jen Lin
+(http://www.csie.ntu.edu.tw/~cjlin/libsvm/), see COPYRIGHT for more
+details on its original license.
+
+Based on source code of svm-predict.c, we write a modified version as
+"svm-predict2.c" to provide more output information.
