@@ -12,6 +12,8 @@ arg_working_dir=$3
 
 arg_output_evd_plot_feat_base=$4
 
+NUM_CPU=$5
+
 ######################################################################
 # 
 # Constants: for the directory settings
@@ -102,7 +104,7 @@ blast_opts="-S 1";              # only the same strand
 blast_opts="$blast_opts -e 1e-10"; # as a quick setting (BLAST 9.3.2)
 blast_opts="$blast_opts -g F";  # un-gapped blast (Frith2006, PLoS)
 blast_opts="$blast_opts -f 14"; # Neighborhood word threshold score, default=12 (BLAST 9.3.2)
-#blast_opts="$blast_opts -a 2";  # 2 CPUs, boost the performance
+blast_opts="$blast_opts -a $NUM_CPU";  # 2 CPUs, boost the performance
 
 blast_opts="$blast_opts -d $m_blast_db"	# database settings
 
