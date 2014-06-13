@@ -12,8 +12,6 @@ arg_working_dir=$3
 
 arg_output_evd_plot_feat_base=$4
 
-NUM_CPU=$5
-
 ######################################################################
 # 
 # Constants: for the directory settings
@@ -97,6 +95,10 @@ fi
 
 
 # Step 1: run blastx & framefinder
+
+if [[ -z "$NUM_CPU" ]]; then
+    NUM_CPU=1;
+fi
 
 # BLASTX settings: Combining the BLAST and Frith2006(PLoS & RNA) protocols
 # XXX: the remote server will NOT use their own settings...
