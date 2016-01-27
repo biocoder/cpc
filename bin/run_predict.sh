@@ -107,8 +107,8 @@ blast_opts="$blast_opts -e 1e-10"; # as a quick setting (BLAST 9.3.2)
 blast_opts="$blast_opts -g F";  # un-gapped blast (Frith2006, PLoS)
 blast_opts="$blast_opts -f 14"; # Neighborhood word threshold score, default=12 (BLAST 9.3.2)
 blast_opts="$blast_opts -a $NUM_CPU";  # 2 CPUs, boost the performance
-blast_opts="$blast_opts -b 25"; # Keep only 25 best alignments to speed up search
-blast_opts="$blast_opts -v 25"; # Keep only 25 descriptions to speed up search
+blast_opts="$blast_opts -b 2"; # Keep only 25 best alignments to speed up search
+blast_opts="$blast_opts -v 2"; # Keep only 25 descriptions to speed up search
 blast_opts="$blast_opts -d $m_blast_db"	# database settings
 
 # Framefinder settings
