@@ -102,7 +102,7 @@ fi
 
 # BLASTX settings: Combining the BLAST and Frith2006(PLoS & RNA) protocols
 # XXX: the remote server will NOT use their own settings...
-blast_opts="-S 1";              # only the same strand
+blast_opts="-S $BLAST_STRAND";              # only the same strand
 blast_opts="$blast_opts -e 1e-10"; # as a quick setting (BLAST 9.3.2)
 blast_opts="$blast_opts -g F";  # un-gapped blast (Frith2006, PLoS)
 blast_opts="$blast_opts -f 14"; # Neighborhood word threshold score, default=12 (BLAST 9.3.2)
